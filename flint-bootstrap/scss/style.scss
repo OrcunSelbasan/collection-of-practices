@@ -1,0 +1,190 @@
+// SCSS DOCUMENT https://sass-lang.com/documentation/style-rules
+@import "variables";
+@import "reset";
+@import "mixins";
+
+// NAVBAR
+
+.nav-link {
+  font-size: 2em;
+  font-family: $roboto;
+  font-weight: 400;
+}
+
+.navbar-toggler:focus {
+  outline: 1px solid $pink;
+  box-shadow: 0 2px 4px 0 $pink;
+}
+
+//HERO
+.wrapper {
+  h1 {
+    font-family: $bebas;
+    color: $header-color;
+    margin-top: 2em;
+  }
+  p {
+    font-family: $roboto;
+    color: $hero-text-color;
+    font-weight: 500;
+  }
+  button {
+    font-family: $roboto;
+    &:focus {
+      outline-style: none;
+      box-shadow: none;
+    }
+  }
+
+  .btn-first {
+    background: rgb(255, 74, 146);
+    background: -moz-linear-gradient(
+      90deg,
+      rgba(255, 74, 146, 1) 0%,
+      rgba(252, 140, 185, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      90deg,
+      rgba(255, 74, 146, 1) 0%,
+      rgba(252, 140, 185, 1) 100%
+    );
+    background: linear-gradient(
+      90deg,
+      rgba(255, 74, 146, 1) 0%,
+      rgba(252, 140, 185, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff4a92",endColorstr="#fc8cb9",GradientType=1);
+  }
+
+  .btn-second {
+    background: rgb(255, 74, 146);
+    background: -moz-linear-gradient(
+      0deg,
+      rgba(255, 74, 146, 1) 0%,
+      rgba(244, 96, 96, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      0deg,
+      rgba(255, 74, 146, 1) 0%,
+      rgba(244, 96, 96, 1) 100%
+    );
+    background: linear-gradient(
+      0deg,
+      rgba(255, 74, 146, 1) 0%,
+      rgba(244, 96, 96, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff4a92",endColorstr="#f46060",GradientType=1);
+  }
+
+  @include max-width(768px) {
+    text-align: center;
+    button {
+      margin: 0 auto;
+    }
+  }
+}
+
+//CARDS
+.card {
+  border-radius: 1em;
+}
+
+.card-title {
+  color: $header-color;
+  font-size: 1.5em;
+  font-family: $roboto;
+  font-weight: 500;
+}
+
+.card-text {
+  color: $gray;
+  font-size: 1.2em;
+  font-family: $roboto;
+}
+
+//PROJECTS & ARTICLES
+.projects {
+  background-color: #f8f9fc;
+  @include headers;
+}
+
+.articles {
+  @include headers;
+  li {
+    color: $orange;
+    font-family: $roboto;
+    border: 1px solid $pink;
+    border-radius: 0.1em;
+  }
+  @include max-width(464px) {
+    .card-body {
+      width: 100%;
+      margin: 0 auto;
+      .card-title {
+        font-size: 1.2em;
+      }
+      .card-text {
+        font-size: 1em;
+      }
+      ul {
+        flex-wrap: wrap;
+        li {
+          font-size: 1em;
+          margin: 0.2em;
+        }
+      }
+    }
+    img {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}
+
+//BANNER & FOOTER
+.inner {
+  border-radius: 3em;
+
+  h1 {
+    font-family: $bebas;
+  }
+
+  button {
+    background: rgb(255, 0, 101);
+    background: -moz-linear-gradient(
+      180deg,
+      rgba(255, 0, 101, 1) 0%,
+      rgba(185, 6, 77, 1) 42%
+    );
+    background: -webkit-linear-gradient(
+      180deg,
+      rgba(255, 0, 101, 1) 0%,
+      rgba(185, 6, 77, 1) 42%
+    );
+    background: linear-gradient(
+      180deg,
+      rgba(255, 0, 101, 1) 0%,
+      rgba(185, 6, 77, 1) 42%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0065",endColorstr="#b9064d",GradientType=1);
+  }
+
+  @include max-width(464px){
+      flex-direction: column;
+      h1{
+          margin-top: 1em;
+      }
+  }
+}
+
+footer{
+    text-align: center;
+    p{
+        font-family: $bebas;
+        color: $gray;        
+    }
+    h1{
+        font-family: $roboto;
+        color: $header-color;
+    }
+}

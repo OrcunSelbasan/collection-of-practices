@@ -1,0 +1,214 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.nav-link {
+  font-size: 2em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.navbar-toggler:focus {
+  outline: 1px solid #FF4A92;
+  -webkit-box-shadow: 0 2px 4px 0 #FF4A92;
+          box-shadow: 0 2px 4px 0 #FF4A92;
+}
+
+.wrapper h1 {
+  font-family: "Bebas Neue", cursive;
+  color: #363958;
+  margin-top: 2em;
+}
+
+.wrapper p {
+  font-family: "Roboto", sans-serif;
+  color: #3E3E3E;
+  font-weight: 500;
+}
+
+.wrapper button {
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper button:focus {
+  outline-style: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.wrapper .btn-first {
+  background: #ff4a92;
+  background: -webkit-gradient(linear, left top, right top, from(#ff4a92), to(#fc8cb9));
+  background: linear-gradient(90deg, #ff4a92 0%, #fc8cb9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff4a92",endColorstr="#fc8cb9",GradientType=1);
+}
+
+.wrapper .btn-second {
+  background: #ff4a92;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff4a92), to(#f46060));
+  background: linear-gradient(0deg, #ff4a92 0%, #f46060 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff4a92",endColorstr="#f46060",GradientType=1);
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    text-align: center;
+  }
+  .wrapper button {
+    margin: 0 auto;
+  }
+}
+
+.card {
+  border-radius: 1em;
+}
+
+.card-title {
+  color: #363958;
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.card-text {
+  color: #6C6C6C;
+  font-size: 1.2em;
+  font-family: "Roboto", sans-serif;
+}
+
+.projects {
+  background-color: #f8f9fc;
+}
+
+.projects h1 {
+  padding-top: 1.5em;
+  font-family: "Bebas Neue", cursive;
+  color: #6C6C6C;
+}
+
+.articles h1 {
+  padding-top: 1.5em;
+  font-family: "Bebas Neue", cursive;
+  color: #6C6C6C;
+}
+
+.articles li {
+  color: #F46060;
+  font-family: "Roboto", sans-serif;
+  border: 1px solid #FF4A92;
+  border-radius: 0.1em;
+}
+
+@media screen and (max-width: 464px) {
+  .articles .card-body {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .articles .card-body .card-title {
+    font-size: 1.2em;
+  }
+  .articles .card-body .card-text {
+    font-size: 1em;
+  }
+  .articles .card-body ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .articles .card-body ul li {
+    font-size: 1em;
+    margin: 0.2em;
+  }
+  .articles img {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.inner {
+  border-radius: 3em;
+}
+
+.inner h1 {
+  font-family: "Bebas Neue", cursive;
+}
+
+.inner button {
+  background: #ff0065;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff0065), color-stop(42%, #b9064d));
+  background: linear-gradient(180deg, #ff0065 0%, #b9064d 42%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0065",endColorstr="#b9064d",GradientType=1);
+}
+
+@media screen and (max-width: 464px) {
+  .inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .inner h1 {
+    margin-top: 1em;
+  }
+}
+
+footer {
+  text-align: center;
+}
+
+footer p {
+  font-family: "Bebas Neue", cursive;
+  color: #6C6C6C;
+}
+
+footer h1 {
+  font-family: "Roboto", sans-serif;
+  color: #363958;
+}
+/*# sourceMappingURL=style.css.map */

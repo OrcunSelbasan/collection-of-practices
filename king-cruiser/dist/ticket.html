@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ruthie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/ticket.css">
+    <title>King Cruiser - Ticket</title>
+</head>
+
+<body>
+    <img id="logo" src="./img/logo.svg" alt="">
+    <div class="main">
+        <div class="main-card">
+            <div class="container">
+                <h1>Your ticket</h1>
+                <div class="pair">
+                    <p id="key"><strong>Ticket No: </strong>
+                    <p class="ticket-no"> 023891213</p>
+                </div>
+                </p>
+                <div class="trip-details">
+                    <div class="pair">
+                        <p id="key"><strong>Cruising from:</strong> </p>
+                        <p class="from">London, England</p>
+                    </div>
+                    <div class="pair">
+                        <p id="key"><strong>Cruising to:</strong> </p>
+                        <p class="to">New York, USA</p>
+                    </div>
+                    <div class="pair">
+                        <p id="key"><strong>Departure:</strong> </p>
+                        <p class="departure">07/23/21</p>
+                    </div>
+                    <div class="pair">
+                        <p id="key"><strong>Return:</strong> </p>
+                        <p class="return">08/03/21</p>
+                    </div>
+                </div>
+                <!-- <div class="seat-details"> -->
+                <div class="seat-details-container">
+                    <div class="seat-details-table">
+                        <div class="ticket-type" id="ticket-type-id">
+                            <p id="key" class="ticket-type">VIP:</p>
+                            <p id="key" class="ticket-type">First Class:</p>
+                            <p id="key" class="ticket-type">Economy:</p>
+                        </div>
+                        <div class="ticket-seat">
+                            <p class="vip-seat">seats: 01</p>
+                            <p class="first-seat">seats: 01</p>
+                            <p class="eco-seat">seats: 02</p>
+                        </div>
+                        <div class="ticket-price">
+                            <p class="vip-price">$14000</p>
+                            <p class="first-price">$1500</p>
+                            <p class="eco-price">$2000</p>
+                        </div>
+                    </div>
+                    <img src="./img/logo-red.svg" alt="Red cruiser logo">
+                </div>
+                <div class="ticket-total">
+                    <p><strong>Total</strong></p>
+                    <p class="total"><strong>$17500</strong></p>
+                </div>
+
+                <!--</div> -->
+                <button id="print">Print the ticket</button>
+                <p class="signature">Kings Cruiser</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        //Ticket number
+        document.querySelector(".ticket-no").innerText = [...Array(9).keys()]
+          .map((x) => x * 0 + Math.floor(Math.random() * 10))
+          .join("");
+        //Destination
+        document.querySelector(".from").innerText =  localStorage.getItem("from");
+        document.querySelector(".to").innerText =   localStorage.getItem("to");
+        //Date
+        depDate = document.querySelector(".departure");
+        retDate = document.querySelector(".return");
+        depDate.innerText =   localStorage.getItem("dep").replaceAll("-", "/").split("/").reverse().join("/");
+        retDate.innerText =   localStorage.getItem("ret").replaceAll("-", "/").split("/").reverse().join("/");
+        // Seat
+        document.querySelector(".vip-seat").innerText =   localStorage.getItem("vipSeat") + " seat";
+        document.querySelector(".first-seat").innerText =   localStorage.getItem("firstSeat") + " seat";
+        document.querySelector(".eco-seat").innerText =   localStorage.getItem("ecoSeat") + " seat";
+        // Price
+        document.querySelector(".vip-price").innerText =   localStorage.getItem("vipPrice");
+        document.querySelector(".first-price").innerText =   localStorage.getItem("firstPrice");
+        document.querySelector(".eco-price").innerText =   localStorage.getItem("ecoPrice");
+        document.querySelector(".total").innerText =   localStorage.getItem("totalPrice");
+
+        document.querySelector("#print").addEventListener('click', (e) => alert("This feature is unavailable"))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname Q_02) (read-case-sensitive #t) (teachpacks ((lib "universe.rkt" "teachpack" "2htdp") (lib "image.rkt" "teachpack" "2htdp") (lib "batch-io.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "universe.rkt" "teachpack" "2htdp") (lib "image.rkt" "teachpack" "2htdp") (lib "batch-io.rkt" "teachpack" "2htdp")) #f)))
+;************************Question02*************************
+;purpose : sums the integers in given number
+;contract : sumDigit: number -> number
+
+(check-expect(sumDigit 123)
+6)
+(check-expect(sumDigit 64109)
+20)
+
+;function:
+
+(define (sumDigit num)
+  (cond
+    ((not (integer? num)) (error "Invalid" ))
+    ((< (abs num) 1) (abs num))
+    (else (+ (remainder (abs num) 10) (sumDigit (quotient (abs num) 10))))))
+
+;test:
+(sumDigit 555)
+(sumDigit 12345)
+(sumDigit -555)
+    

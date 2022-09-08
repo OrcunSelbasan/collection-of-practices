@@ -1,0 +1,13 @@
+@mixin max-width($width){
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin headers{
+    h1{
+        padding-top: 1.5em;
+        font-family: $bebas;
+        color: $gray;
+    }
+}

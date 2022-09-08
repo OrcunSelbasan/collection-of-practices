@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/dist/css/style.css">
+    <title>Movie Page</title>
+</head>
+<body>
+    <!-- NAV -->
+    <nav class="navbar">
+        <div class="container-xl nav-container">
+            <div class="d-flex left">
+                <a class="navbar-brand" href="#"><img src="./img/navbar/nav-brand.svg" class="img-fluid" alt=""></a>
+                <div class="container-fluid">
+                    <ul class="navbar-nav justify-content-between align-items-center d-flex flex-row">
+                        <div class="left d-flex flex-row">
+                            <li class="nav-item mx-1">
+                                <a class="nav-link"href="#"><img src="./img/navbar/nav-home.svg" alt=""></a>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a class="nav-link" href="#"><img src="./img/navbar/nav-list.svg" alt=""></a>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a class="nav-link" href="#"><img src="./img/navbar/nav-watch.svg" alt=""></a>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a class="nav-link" href="#"><img src="./img/navbar/nav-fav.svg" alt=""></a>
+                            </li>
+                        </div>                        
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <ul class="navbar-nav align-items-center d-flex flex-row">
+                    <li class="nav-item mx-1">
+                      <a class="nav-link" href="#"><img src="./img/navbar/nav-search.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item mx-1">
+                      <a class="nav-link" href="#"><img src="./img/navbar/nav-profile.svg" alt=""></a>
+                    </li>
+                    <li class="nav-item mx-1">
+                      <a class="nav-link" href="#"><img src="./img/navbar/nav-settings.svg" alt=""></a>
+                    </li>
+                </ul>
+            </div>      
+        </div>
+    </nav>
+    <!-- HERO -->
+    <div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/hero/card-img 1.jpg" class="d-block w-100" style="opacity: 0.65;" alt="...">
+            <div class="carousel-caption mb-4 d-none d-sm-block text-start">
+              <p class="lead category">Science Fiction</p>
+              <ul class="rating">
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+              </ul>
+              <h1 class="mb-3">Godzilla vs Kong</h1>
+              <p class="w-50 mb-3 pb-3 description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis cumque magnam dolore aliquid explicabo maiores saepe quod odit quas dignissimos.</p>
+              <button class="btn btn-outline-light mb-5 py-3 px-5" style="border-radius: 1em;" data-bs-toggle="modal" data-bs-target="#watchModal"><p class="px-3 fs-4 m-auto">Watch Now</p></button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/hero/card-img 1.jpg" class="d-block w-100" style="opacity: 0.65;" alt="...">
+            <div class="carousel-caption mb-4 d-none d-sm-block text-start">
+              <p class="lead category">Science Fiction</p>
+              <ul class="rating">
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+              </ul>
+              <h1 class="mb-3">Godzilla vs Kong</h1>
+              <p class="w-50 mb-3 pb-3 description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis cumque magnam dolore aliquid explicabo maiores saepe quod odit quas dignissimos.</p>
+              <button class="btn btn-outline-light mb-5 py-3 px-5" style="border-radius: 1em;" data-bs-toggle="modal" data-bs-target="#watchModal"><p class="px-3 fs-4 m-auto">Watch Now</p></button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/hero/card-img 1.jpg" class="d-block w-100" style="opacity: 0.65;" alt="...">
+            <div class="carousel-caption d-n4ne d-sm-block text-start">
+              <p class="lead category">Science Fiction</p>
+              <ul class="rating">
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+              </ul>
+              <h1 class="mb-3">Godzilla vs Kong</h1>
+              <p class="w-50 mb-3 pb-3 description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis cumque magnam dolore aliquid explicabo maiores saepe quod odit quas dignissimos.</p>
+              <button class="btn btn-outline-light mb-5 py-3 px-5" style="border-radius: 1em;" data-bs-toggle="modal" data-bs-target="#watchModal"><p class="px-3 fs-4 m-auto">Watch Now</p></button>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev justify-content-start" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next justify-content-end" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- NEW RELEASES -->
+    <div class="container-fluid mb-5">
+        <h3 class="display-6 text-light ms-3 mt-5 mb-3">New Releases <a href="#newreleases" class="text-light"><i class="bi bi-chevron-right"></i></a></h1>            
+          <div class="card-group" id="newreleases">
+            <div class="card bg-dark text-white mx-1 my-5">
+              <img src="./img/movies/card-img-0.jpg" class="card-img"  alt="...">
+              <div class="card-img-overlay p-0">
+                <div class="h-100 d-flex flex-column justify-content-end align-items-start">
+                  <p class="mx-5 lead category movie-props">Fantasy</p>               
+                  <ul class="mx-5 rating movie-props">
+                    <li><i class="bi bi-star-fill"></i></li>
+                    <li><i class="bi bi-star-fill"></i></li>
+                    <li><i class="bi bi-star-fill"></i></li>
+                    <li><i class="bi bi-star-fill"></i></li>
+                    <li><i class="bi bi-star-fill"></i></li>
+                  </ul>
+                  <h5 class="mx-5 mb-5 card-title">Wonder Woman 1984</h5>
+                </div>               
+              </div>
+            </div>
+            <div class="card bg-dark text-white mx-1 my-5">
+              <img src="./img/movies/card-img-1.jpg" class="card-img"  alt="...">
+              <div class="card-img-overlay p-0">
+                <div class="h-100 d-flex flex-column justify-content-end align-items-start">
+                  <p class="mx-5 lead category movie-props">Fantasy</p>
+                <ul class="mx-5 rating movie-props">
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+              </ul>
+                <h5 class="mx-5 mb-5 card-title">Zack Snyder's Justice League</h5>
+              </div>
+                </div>                
+            </div>
+            <div class="card bg-dark text-white mx-1 my-5">
+              <img src="./img/movies/card-img-2.jpg" class="card-img"  alt="...">
+              <div class="card-img-overlay p-0">
+                <div class="h-100 d-flex flex-column justify-content-end align-items-start">
+                  <p class="mx-5 lead category movie-props">Fantasy</p>
+                <ul class="mx-5 rating movie-props">
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+              </ul>
+                <h5 class="mx-5 mb-5 card-title">Mortal Kombat</h5>
+                </div>           
+              </div>
+            </div>
+            <div class="card bg-dark text-white mx-1 my-5">
+              <img src="./img/movies/card-img-3.jpg" class="card-img"  alt="...">
+              <div class="card-img-overlay p-0">
+                <div class="h-100 d-flex flex-column justify-content-end align-items-start">
+                  <p class="mx-5 lead category movie-props">Drama</p>
+                <ul class="mx-5 rating movie-props">
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+              </ul>
+                <h5 class="mx-5 mb-5 card-title">The Courier</h5>
+                </div>               
+              </div>
+            </div>
+            <!-- <div class="card bg-dark text-white mx-1 my-5">
+              <img src="./img/movies/card-img-4.jpg" class="card-img" style="opacity: 0.65;" alt="...">
+              <div class="card-img-overlay p-0 m-3">
+                <p class="mx-5 lead category">Action</p>
+                <ul class="rating">
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+              </ul>
+                <h5 class="card-title">Thunder Force</h5>
+              </div>
+            </div> -->
+          </div>
+    </div>
+    <!-- TV SHOWS -->
+    <div class="container-fluid mb-5">
+      <h3 class="display-6 text-light ms-3 mt-5 mb-3">Featured Tv shows <a href="#tvshows" class="text-light"><i class="bi bi-chevron-right"></i></a></h1>            
+        <div class="card-group" id="tvshows">
+          <div class="card bg-dark text-white mx-1 my-5">
+            <img src="./img/tvshows/card-img-0.jpg" class="card-img" style="opacity: 0.65;" alt="...">
+            <div class="card-img-overlay p-0 fs-2">
+              <div class="h-100 d-flex flex-column justify-content-end align-items-start">
+                <p class="mx-5 lead category">Sci-Fi & Fantasy</p>
+                <ul class="mx-5 rating">
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                </ul>
+                <h5 class="mx-5 mb-5card-title fs-2">Game of Thrones</h5>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-dark text-white mx-1 my-5">
+            <img src="./img/tvshows//card-img-1.jpg" class="card-img" style="opacity: 0.65;" alt="...">
+            <div class="card-img-overlay p-0 fs-3">
+              <div class="h-100 d-flex flex-column justify-content-end align-items-start">
+                <p class="mx-5 lead category">Sci-Fi & Fantasy</p>
+                <ul class="mx-5 rating">
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                </ul>
+                <h5 class="mx-5 mb-5card-title fs-2">The Falcon and the Winter Soldier</h5>
+              </div>
+            </div>
+          </div>     
+        </div>
+    </div>
+    <!-- WATCH MODAL -->
+    <div class="modal fade" id="watchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">           
+          <div class="modal-body modal-banner text-light" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/banner/banner.jpg'); background-size: cover;">
+              <h5 class="mx-5 lead category mt-5 mb-2 d-flex align-items-end p-0">Fantasy</p>
+                <h5 class="mx-5 mb-2">   
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </h5>           
+                <h5 class="mx-5 fs-3 mb-3">The Falcon and the Winter Soldier</h5>
+                <h5 class="lead mx-5 mb-3">It's silly but works</h5>
+                <h5><button class="btn btn-outline-light mx-5 mb-5 py-2 px-3" style="border-radius: 1em;" data-bs-toggle="modal" data-bs-target="#watchModal"><p class="px-3 fs-4 m-auto">Watch Now</p></button></h5>
+          </div>
+          <div class="modal-footer d-flex flex-column justify-content-start align-items-start">
+            <div>
+              <h5 class="display-6 text-light ms-3 mt-5 mb-3 text-start">Seasons <a href="#tvshows" class="text-light"><i class="bi bi-chevron-right"></i></a></h1>
+              <div class="d-flex">
+                <button class="btn btn-outline-light ms-3 px-5 py-3">1</button>  
+                <button class="btn btn-outline-light ms-3 px-5 py-3">2</button>  
+              </div>          
+            </div>
+            <div>
+              <h5 class="display-6 text-light ms-3 mt-5 mb-3 text-start">Episodes <a href="#tvshows" class="text-light"><i class="bi bi-chevron-right"></i></a></h1>
+              <div class="d-flex">
+                <div class="card-group text-light">
+                  <div class="card mx-2" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/banner/banner-ep/card-img-0.png'); background-size: cover;">                
+                    <div class="card-body">
+                      <h5 class="card-title mt-5">Episode 1</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, aliquid.</p>                      
+                    </div>
+                  </div>
+                  <div class="card mx-2" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/banner/banner-ep/card-img-1.pngg'); background-size: cover;">                
+                    <div class="card-body">
+                      <h5 class="card-title mt-5">Episode 2</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, aliquid.</p>                      
+                    </div>
+                  </div>
+                  <div class="card mx-2" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/banner/banner-ep/card-img-2.png'); background-size: cover;">                
+                    <div class="card-body">
+                      <h5 class="card-title mt-5">Episode 3</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, aliquid.</p>                      
+                    </div>
+                  </div>
+                </div>
+              </div>          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

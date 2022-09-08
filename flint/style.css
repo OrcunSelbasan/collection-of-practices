@@ -1,0 +1,272 @@
+/* COMMON */
+h1,
+h2,
+h3 {
+    font-family: 'Bebas Neue', cursive;
+    color: #363958;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-main{
+    border-style: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: linear-gradient();
+    max-width: 200px;
+    max-height: 70px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVIGATON BAR */
+header {
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav img {
+    width: 6vh;
+    padding: 20px 0;
+}
+
+/* HERO SECTION */
+.hero-section-main {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.hero-section-outer-container {
+    width: 100%;
+    min-height: 480px;
+    display: flex;
+}
+
+.right-container,
+.left-container {
+    width: 50%;
+    margin: auto 0;
+}
+
+.right-container {
+    margin-top: 0;
+}
+
+.left-container{
+    margin-right: 15vw;
+}
+
+/* TEXT BOX */
+.text-box button {
+    margin: 50px 0;
+}
+
+.hero-section-inner-left-container-text-box h1,
+#devid {
+    font-size: 80px;
+    color: #363958;
+}
+
+.hero-section-inner-left-container-text-box p,
+.hero-section-inner-right-container-text-box p {
+    font-weight: normal;
+    color: #3E3E3E;
+    font-size: 16px;
+    margin: 0;
+}
+
+#devid {
+    color: #FF4A92;
+}
+
+.hero-section-inner-right-container-text-box h1{
+    font-size: 48px;
+}
+
+#btn-hire{
+    background: rgb(255,74,146);
+    background: linear-gradient(90deg, rgba(255,74,146,1) 0%, rgba(255,138,185,1) 100%);
+    color: #FFFFFF;
+    font-weight: bold;
+    width: 170px;
+    height: 60px;
+}
+
+#btn-cv img{
+    width: 24px;
+}
+
+#btn-cv p{
+    width: max-content;
+    height: 24px;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+#btn-cv{
+    background: rgb(255,74,146);
+    background: linear-gradient(0deg, rgba(255,74,146,1) 0%, rgba(252,135,95,1) 100%);
+    width: 170px;
+    height: 60px;
+    padding: 10px 20px;
+    margin-top: 50px;
+}
+
+.cv-inside{
+    display: flex;
+    justify-content: space-around;    
+}
+
+/* HERO IMG */
+.hero-section-inner-left-container img {
+    width: 100%;
+    max-width: 500px;
+    max-height: 510px;
+    margin-top: 25px;
+}
+
+.hero-section-inner-right-container img {
+    width: 100%;
+    max-width: 401px;
+    max-height: 611px;
+}
+
+/* PROJECTS */
+.prj-body{
+    width: 100%;
+}
+
+#prj{
+    text-align: center;
+    padding-top: 2.5em;
+    font-size: 48px;
+}
+
+.prj-cards{
+    width: 75%;
+    margin: 50px auto;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;    
+}
+
+.prj-card{
+    width: 30%;
+    margin: 30px 0;
+    min-width: 345px;
+    border-radius: 1em;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.prj-card img, .prj-card-container{
+    width: 90%;
+    margin: 5%;
+}
+
+/* ARTICLES */
+#artcl{
+    font-size: 64px;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.articles-body{
+    width: 100%;
+}
+
+.article-cards{
+    width: 75%;
+    margin: 50px auto;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;    
+}
+
+.article-card{
+    text-align: center;
+    width: 45%;
+    min-width: 345px;
+    border-radius: 1em;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.article-card img, .article-card-container{
+    width: 90%;
+    margin: 5%;
+}
+
+.article-card-container ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    padding: 0;
+}
+
+#article-tag{
+    color: #F46060;
+    border: 3px solid #FF4A92;
+    border-radius: 3px;
+    padding: 0.2em 0.4em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* BANNER */
+.banner-main{
+    width: 100%;
+}
+
+.banner{
+    width: 60%;
+    margin: 0 auto;
+    background: rgb(244,96,96);
+    background: linear-gradient(90deg, rgba(244,96,96,1) 0%, rgba(255,178,152,1) 100%);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 3em;
+    border-radius: 1.5em;
+}
+
+.banner h1{
+    color: #FFFFFF;
+    font-size: 64px;
+}
+
+#btn-chat{
+    background: rgb(108,7,48);
+    background: linear-gradient(180deg, rgba(108,7,48,1) 0%, rgba(255,0,101,1) 100%);
+    color: #FFFFFF;
+    font-size: 16px;
+    border-radius: 0.5em;
+    border-style: none;
+    padding: 1em 2em;
+    margin: auto 0;
+}
+/* FOOTER */
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+footer li{
+    margin: 0 0.5em;
+}

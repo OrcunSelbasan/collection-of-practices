@@ -1,0 +1,23 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname Question_1) (read-case-sensitive #t) (teachpacks ((lib "universe.rkt" "teachpack" "2htdp") (lib "image.rkt" "teachpack" "2htdp") (lib "batch-io.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "universe.rkt" "teachpack" "2htdp") (lib "image.rkt" "teachpack" "2htdp") (lib "batch-io.rkt" "teachpack" "2htdp")) #f)))
+;***********************Q_1****************
+;Purpose: printing season with given number from user
+;Contract: findMonth : number(month) --> string
+;Example:
+(check-expect (findMonth 10) "fall")
+(check-expect (findMonth 5) "spring")
+(check-expect (findMonth 13) "Invalid")
+;function:
+(define (findMonth n)
+  (cond
+    ((or (<= n 0) (> n 12)) (error "Invalid"))
+    ((and (>= n 3)(<= n 5)) "spring")
+    ((and (>= n 6)(<= n 8)) "summer")
+    ((and (>= n 9)(<= n 11)) "fall")
+    (else "winter")))
+;test:
+
+(findMonth 8)
+(findMonth 1)
+(findMonth 0)

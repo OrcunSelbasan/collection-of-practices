@@ -1,0 +1,27 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname Q01) (read-case-sensitive #t) (teachpacks ((lib "universe.rkt" "teachpack" "2htdp") (lib "image.rkt" "teachpack" "2htdp") (lib "batch-io.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "universe.rkt" "teachpack" "2htdp") (lib "image.rkt" "teachpack" "2htdp") (lib "batch-io.rkt" "teachpack" "2htdp")) #f)))
+;***************Question01***********
+;purpose: to check number is prime or not
+;contract: number --> boolean
+(check-expect (isPrime 7) #true)
+(check-expect (isPrime 16) #false)
+
+;function:
+(define (isPrime_v0 p k)
+  (cond
+    ((= p 1) #false)
+    ((<= p 0)(error "invalid"))
+    ((<= k 1) #false)
+    ((and(>= k 2)(= 0(remainder p k))) #true)
+    (else (isPrime_v0 p (sub1 k)))))
+
+(define (isPrime p) (not (isPrime_v0 p (sub1 p))))
+
+;test:
+(isPrime 9)
+(isPrime 13)
+(isPrime 17)
+(isPrime 1)
+
+ 

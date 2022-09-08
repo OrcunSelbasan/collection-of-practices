@@ -1,0 +1,113 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-intermediate-lambda-reader.ss" "lang")((modname proje) (read-case-sensitive #t) (teachpacks ((lib "universe.rkt" "teachpack" "2htdp") (lib "image.rkt" "teachpack" "2htdp") (lib "batch-io.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "universe.rkt" "teachpack" "2htdp") (lib "image.rkt" "teachpack" "2htdp") (lib "batch-io.rkt" "teachpack" "2htdp")) #f)))
+;CONSTANTS
+(define HEIGHT 1000)
+(define WIDTH 1000)
+(define BACKGROUND (empty-scene WIDTH HEIGHT))
+(define BG (square WIDTH "solid" "white"))
+
+;definition of structure:
+(define-struct shape (type posn direction color size))
+
+;constructor:
+(define s1 (make-shape "circle" (make-posn 300 300) "up" "blue" 100))
+(define s2 (make-shape "square" (make-posn 300 600) "right" "gray" 200))
+(define s3 (make-shape "circle" (make-posn 600 300) "down" "orange" 300))
+(define s4 (make-shape "square" (make-posn 600 600) "left" "purple" 400))
+
+;selector:
+(shape-type s1)
+(shape-posn s2)
+(shape-direction s3)
+(shape-color s4)
+             
+;predicator:
+(shape? s1)
+(shape? "circle")
+
+;List of Structure
+
+(define shapeStructureList (list s1 s2 s3 s4))
+
+;TO DRAW PART
+;type selector for creating images from given type(string)
+(define (typeselect ashape)
+  (cond
+    ((string=? "circle" (shape-type ashape))(circle (shape-size ashape) "solid"(shape-color ashape)))
+    ((string=? "square" (shape-type ashape))(square (shape-size ashape) "solid"(shape-color ashape)))
+    (else (error "Invalid"))))
+     
+;creating Image list for first part of place-images
+(define (IMGlst x)
+  (cond
+    ((empty? x) empty)
+    (else (cons (typeselect (first x)) (IMGlst(rest x))))))
+
+;creating Position list for second part of place-images
+(define (POSNlst x)
+  (cond
+    ((empty? x) empty)
+    (else (cons (shape-posn (first x)) (POSNlst (rest x))))))
+
+;to-draw:
+(define (render ashape)
+  (place-images
+    (list
+   (typeselect (first ashape)) 
+   (typeselect (second ashape)) 
+   (typeselect (third ashape)) 
+   (typeselect (fourth ashape)))
+    (list
+   (make-posn (posn-x (shape-posn (first ashape))) (posn-y (shape-posn (first ashape))))
+   (make-posn (posn-x (shape-posn (second ashape))) (posn-y (shape-posn (second ashape))))
+   (make-posn (posn-x (shape-posn (third ashape))) (posn-y (shape-posn (third ashape))))
+   (make-posn (posn-x (shape-posn (fourth ashape))) (posn-y (shape-posn (fourth ashape)))))
+   BG))
+;second to-draw
+(define (render2 ashape)
+  (place-images (IMGlst ashape) (POSNlst ashape) BG))
+
+;ON TICK PART
+;direction selector
+(define (dirselect ashape)
+  (cond
+  ((string=? "up" (shape-direction ashape))(make-shape (shape-type ashape) (make-posn (posn-x (shape-posn ashape)) (add1 (posn-y (shape-posn ashape)))) (shape-direction ashape) (shape-color ashape) (shape-size ashape)))
+  ((string=? "down" (shape-direction ashape))(make-shape (shape-type ashape) (make-posn (posn-x (shape-posn ashape)) (sub1 (posn-y (shape-posn ashape)))) (shape-direction ashape) (shape-color ashape) (shape-size ashape)))
+  ((string=? "right" (shape-direction ashape))(make-shape (shape-type ashape) (make-posn (add1 (posn-x (shape-posn ashape)))  (posn-y (shape-posn ashape))) (shape-direction ashape) (shape-color ashape) (shape-size ashape)))
+  ((string=? "left" (shape-direction ashape))(make-shape (shape-type ashape) (make-posn (sub1 (posn-x (shape-posn ashape))) (posn-y (shape-posn ashape))) (shape-direction ashape) (shape-color ashape) (shape-size ashape)))
+  ))
+
+;on-tick:
+(define (on-tock ashape)
+  (map (lambda (ashape) (dirselect ashape)) ashape))
+
+;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+;**********************************************************************************
+;ON KEY PART
+(define (deletShape ashape ke)
+  (cond
+    ((key=? ke "d")(on-tock (rest ashape)))
+    (else (on-tock ashape))))
+
+
+;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+;***************************************************************************************
+;ON MOUSE PART
+(define (resShape ashape x y me)
+  (cond
+    ((mouse=? me "button-down")(on-tock shapeStructureList))
+    (else  ashape)))
+
+
+
+;ACTION TIME
+  (define (ActionTime alist)
+    (big-bang alist
+      (to-draw render2)
+      (on-tick on-tock)
+      (on-key deletShape)
+      (on-mouse resShape)
+      ))
+
+(ActionTime shapeStructureList)

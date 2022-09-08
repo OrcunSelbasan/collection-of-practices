@@ -1,0 +1,23 @@
+@mixin category {
+  color: rgba(15, 239, 253, 1);
+  background-color: rgba(29, 29, 29, 0.5);
+  padding: 0.1em 0.3em;
+  border-top-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  width: fit-content;
+}
+
+@mixin rating {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  li {
+    margin: 0 0.2em;
+  }
+}
+
+@mixin mQ($arg) {
+  @media screen and (max-width: $arg) {
+    @content;
+  }
+}

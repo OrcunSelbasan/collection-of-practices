@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS is necessary for styling of the components, layout, forms etc.-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap icons from the CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Font Style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon for the title bar -->
+    <link rel="icon" href="./img/nav_icons/brand.svg" />
+
+    <!-- Linking CSS file -->
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <title>Devid Flint</title>
+  </head>
+  <body>
+    <!-- NOTE: Using class names is how Bootstrap works. EX:
+    <p class="lead ms-5 me-4 pt-3 pb-2"> I'm a p tag which has text attributes of lead class and which has margin from start and end; padding from top and bottom</p>
+    
+    MARGIN: m-0, m-1, m-2,... m-6 different types => ms-1, me-2, mt-3, mb-4, m-auto, mx-3, my-4 
+
+    I suggest you to read and have a basic understanding of the subtopics of Layout section    -->
+
+    <!-- NAVBAR SECTION -->
+    <!-- Check Bootstrap 5 docs => components => navbar -->
+    <div class="container-md">
+      <nav class="navbar navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="./img/nav_icons/brand.svg" alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            style="border: none"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <img src="./img/nav_icons/dropdown.svg" alt="" />
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-end" style="color: #363958" href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-end" style="color: #363958" href="#"
+                  >Features</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-end" style="color: #363958" href="#"
+                  >Pricing</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-end" style="color: #363958" href="#"
+                  >Disabled</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- HERO SECTION -->
+    <!-- Containers, rows, columns, flex properties etc can be used. EX:
+        <div class="container-lg d-flex flex-column justifyc-content-center align-items-start"
+        -->
+    <div class="container-md">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="wrapper">
+            <h1 class="display-1">
+              HELLO, I'M<br /><span style="color: #ff4a92">DEVID FLINT</span>
+            </h1>
+            <p class="lead mb-5">I build things for the Cyber World.</p>
+            <button
+              class="btn-first btn btn-lg text-light px-5 py-3 my-5 d-block"
+              type="button"
+            >
+              Hire Me
+            </button>
+            <img class="img-fluid" src="./img/hero/left.png" alt="" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="wrapper">
+            <img class="img-fluid" src="./img/hero/right.png" alt="" />
+            <h1 class="display-3">ABOUT</h1>
+            <p class="lead">
+              I'm a Planet Earth-based software engineer with specialized skills
+              in developing (& sometimes designing) outstanding digital
+              platforms. I am also a freelance developer and designer but
+              looking for a full-time remote job... if you have one feel free to
+              knock!!
+            </p>
+            <button
+              class="btn-second btn btn-lg text-light px-5 py-3 my-5"
+              type="button"
+            >
+              <i class="bi bi-download me-3"></i>Download CV
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECTS SECTION -->
+    <!-- Check Bootstrap 5 docs => components => Card -->
+    <div class="container-fluid projects">
+      <h1 class="display-4 mb-3 text-center">
+        <span style="color: #ff4a92">PROJECT'S</span> I AM WORKING ON
+      </h1>
+      <div
+        class="container-md d-flex justify-content-center align-items-center"
+      >
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card p-3 my-5 mx-3">
+              <img
+                src="./img/projects/project-1.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title my-3">Zim's Gym</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ratione ipsum nesciunt optio aspernatur blanditiis beatae!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card p-3 my-5 mx-3">
+              <img
+                src="./img/projects/project-2.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title my-3">Creative Colt</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                  praesentium pariatur soluta, voluptate minus cupiditate!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card p-3 my-5 mx-3">
+              <img
+                src="./img/projects/project-3.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title my-3">Music Mania with Munia</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                  praesentium pariatur soluta, voluptate minus cupiditate!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ARTICLES SECTION -->
+    <!-- Check Bootstrap 5 docs => components => Card, also it needs a small modification for the list of tags-->
+    <div class="container-fluid articles">
+      <h1 class="display-4 mb-3 text-center">
+        THIS WEEK'S POPULAR<span style="color: #ff3131"> ARTICLES</span>
+      </h1>
+      <div
+        class="container-md d-flex justify-content-center align-items-center"
+      >
+        <div class="row">
+          <div class="col-sm-12 col-lg-6">
+            <div class="card p-3 my-5 mx-3">
+              <img
+                src="./img/articles/article-1.png"
+                class="img-fluid"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title my-3">
+                  Top 10 destination for software developer
+                </h5>
+                <p class="card-text">
+                  molestias excepturi sint occaecati cupiditate non provident,
+                  similique sunt in culpa qui officia deserunt mollitia animi,
+                  id est laborum et dolorum fuga. Et harum quidem rerum facilis
+                  est et expedita distinctio. Nam libero tempore, cum soluta
+                  nobis est eligendi...
+                </p>
+                <ul
+                  class="d-flex justify-content-center align-items-center mt-4"
+                >
+                  <li class="mx-2 py-2 px-2">Life Style</li>
+                  <li class="mx-2 py-2 px-2">Web Design</li>
+                  <li class="mx-2 py-2 px-2">Web Development</li>
+                  <li class="mx-2 py-2 px-2">Travel</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-6">
+            <div class="card p-3 my-5 mx-3">
+              <img
+                src="./img/articles/article-2.png"
+                class="img-fluid"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title my-3">
+                  10 work from home tips for work efficiency:
+                </h5>
+                <p class="card-text">
+                  molestias excepturi sint occaecati cupiditate non provident,
+                  similique sunt in culpa qui officia deserunt mollitia animi,
+                  id est laborum et dolorum fuga. Et harum quidem rerum facilis
+                  est et expedita distinctio. Nam libero tempore, cum soluta
+                  nobis est eligendi...
+                </p>
+                <ul
+                  class="d-flex justify-content-center align-items-center mt-4"
+                >
+                  <li class="mx-2 py-2 px-2">Life Style</li>
+                  <li class="mx-2 py-2 px-2">Front-end</li>
+                  <li class="mx-2 py-2 px-2">Web Development</li>
+                  <li class="mx-2 py-2 px-2">CSS</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BANNER SECTION -->
+    <!-- Do as you want -->
+    <div class="container-md my-5 pt-5">
+        <div class="inner d-flex justify-content-around align-items-center" style="  background: url('../img/banner.png') no-repeat;
+        background-size: cover;">
+            <h1 class="display-1 fw-bold text-light">ANY INQUIRY?</h1>
+            <button class="btn-first btn btn-lg text-light px-5 py-3 my-5 d-block" type="button">
+                Let's Chat
+            </button>
+        </div>
+    </div>
+    <!-- FOOTER SECTION -->
+    <!-- Do as you want -->
+    <footer class="my-5 pt-5">
+        <p class="display-6">STAY CONNECTED</p>
+        <h1 class="display-5 fw-bold">contact@mail.com</h1>
+        <ul class="d-flex justify-content-center align-items-center mt-3">
+            <li class="mx-2"><a href="#"><img src="./img/footer_logo/logo-1.png" alt=""></a></li>
+            <li class="mx-2"><a href="#"><img src="./img/footer_logo/logo-2.png" alt=""></a></li>
+            <li class="mx-2"><a href="#"><img src="./img/footer_logo/logo-3.png"" alt=""></a></li>        
+        </ul>"
+    </footer>
+
+    <!-- We also need script tag as javascript provides functionality to some components. Check this for more information: https://getbootstrap.com/docs/5.1/getting-started/introduction/ -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

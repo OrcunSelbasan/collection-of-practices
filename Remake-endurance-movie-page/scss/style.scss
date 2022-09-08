@@ -1,0 +1,82 @@
+@import "mixins";
+@import "variables";
+
+body {
+  background-color: $main-color;
+  font-family: $font;
+}
+
+.navbar {
+  background-color: $main-color-transparent;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.category {
+  @include category();
+}
+
+.rating {
+  @include rating();
+}
+
+.description,
+.watch-now {
+  @include mQ(1185px) {
+    display: none;
+  }
+}
+
+.navbar {
+  @include mQ(768px) {
+    position: relative;
+    background-color: $main-color;
+  }
+}
+
+.card-img-overlay {
+  background: rgb(29, 29, 29);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(29, 29, 29, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(29, 29, 29, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(29, 29, 29, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1d1d1d",endColorstr="#1d1d1d",GradientType=1);
+}
+
+.modal-content{
+  background-color: $main-color;
+}
+
+@media screen and (max-width: 400px) {
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .right {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 980px) and (min-width:576px) {
+  .movie-props{
+    display: none;
+  }
+}

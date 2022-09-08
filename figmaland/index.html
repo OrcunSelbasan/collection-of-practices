@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Figma Land - Bootstrap</title>
+  </head>
+  <body style="background: #181818">
+    <!-- NAVBAR -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background: #181818"
+    >
+      <div class="container-md">
+        <a class="navbar-brand" href="#"
+          ><img src="./img/nav/nav-logo.svg" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-end justify-content-between"
+          id="navbarSupportedContent"
+        >
+          <a class="inner-nav-brand" href="#"
+            ><img src="./img/nav/nav-logo.svg" alt=""
+          /></a>
+          <ul class="navbar-nav mb-2 mb-lg-0 text-end">
+            <li class="nav-item px-4">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link active" href="#">Product</a>
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link active" href="#">About</a>
+            </li>
+            <li class="nav-item px-4">
+              <a
+                class="nav-link active"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <a href="#" class="btn btn-lg btn-outline-light py-2 px-5">Login</a>
+        </div>
+      </div>
+    </nav>
+    <!-- HERO -->
+    <div class="container-md">
+      <div class="row text-light text-center flex-column">
+        <p class="display-1 mt-5 w-50 m-auto">Work at the speed of thought</p>
+        <p class="lead pt-5 w-50 m-auto">
+          Most calendars are designed for teams. Slate is designed for
+          freelancers who want a simple way to plan their schedule.
+        </p>
+      </div>
+      <div class="row my-5 pt-1 justify-content-center">
+        <div class="col col-sm-3 text-center">
+          <button class="btn btn-lg px-5 py-3 my-4 purple-btn">
+            Try For Free
+          </button>
+        </div>
+        <div class="col col-sm-3 text-center">
+          <button class="btn btn-lg px-5 py-3 my-4 btn-outline-light">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <img
+          src="./img/hero/screens.svg"
+          class="img-fluid p-0"
+          width="90%"
+          alt=""
+        />
+      </div>
+    </div>
+    <!-- FEATURES -->
+    <div class="container-md mb-5 pb-3">
+      <div class="row text-center flex-column text-light mb-5">
+        <p class="display-3 mt-5 w-50 m-auto">Features</p>
+        <p class="lead mt-5 w-50 m-auto">
+          Most calendars are designed for teams. Slate is designed for
+          freelancers who want a simple way to plan their schedule.
+        </p>
+      </div>
+      <div class="row text-light pt-5">
+        <div class="col-md-6 col-lg-8 d-flex justify-content-center">
+          <img
+            src="./img/features/features-frame.svg"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+        <div
+          class="
+            col-md-6 col-lg-4
+            d-flex
+            flex-column
+            justify-content-around
+            my-5
+          "
+        >
+          <div class="container-fluid">
+            <div class="row">
+              <img
+                src="./img/features/features-icons/Vector-1.svg"
+                height="32px"
+                alt=""
+                style="width: 20%; padding: 0"
+              />
+              <p class="lead fw-bold w-75 p-0">A single source of truth</p>
+            </div>
+            <div class="row">
+              <p class="lead">
+                When you add work to your Slate calendar we automatically
+                calculate useful insights
+              </p>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row">
+              <img
+                src="./img/features/features-icons/Vector-2.svg"
+                height="32px"
+                alt=""
+                style="width: 20%; padding: 0"
+              />
+              <p class="lead fw-bold w-75 p-0">Intuitive interface</p>
+            </div>
+            <div class="row">
+              <p class="lead">
+                When you add work to your Slate calendar we automatically
+                calculate useful insights
+              </p>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row">
+              <img
+                src="./img/features/features-icons/Vector-3.svg"
+                height="24px"
+                alt=""
+                style="width: 20%; padding: 0"
+              />
+              <p class="lead fw-bold w-75 p-0">Or with rules</p>
+            </div>
+            <div class="row">
+              <p class="lead">
+                When you add work to your Slate calendar we automatically
+                calculate useful insights
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CONTENTS -->
+    <div class="container-md mb-5 pb-3">
+      <div class="row text-center flex-column text-light mb-5">
+        <p class="display-3 mt-5 w-50 m-auto">Contents</p>
+        <p class="lead mt-5 w-50 m-auto">
+          We focus on ergonomics and meeting you where you work. It's only a
+          keystroke away.
+        </p>
+      </div>
+      <div class="row content-cards">
+        <div class="card text-center content-card mt-5">
+          <div class="card-body">
+            <h5 class="card-title my-4">Work</h5>
+            <p class="card-text my-4">
+              Ever wondered if you're too reliant on a client for work? Slate
+              helps you identify .
+            </p>
+            <a href="#" class="btn btn-lg px-5 py-3 my-4 purple-btn">Sign Up</a>
+          </div>
+          <img src="./img/contents/mac.svg" class="p-3" alt="..." />
+        </div>
+        <div class="card text-center content-card mt-5">
+          <div class="card-body">
+            <h5 class="card-title my-4">Design with real data</h5>
+            <p class="card-text my-4">
+              Ever wondered if you're too reliant on a client for work? Slate
+              helps you identify .
+            </p>
+            <a href="#" class="btn btn-lg px-5 py-3 my-4 purple-btn"
+              >Try For Free</a
+            >
+          </div>
+          <img src="./img/contents/board.svg" class="p-3" alt="..." />
+        </div>
+      </div>
+    </div>
+    <!-- GALLERY  -->
+    <div class="container-md mb-5 pb-3 text-center">
+      <div class="row text-center flex-column text-light mb-5">
+        <p class="display-3 mt-5 w-50 m-auto">Gallery</p>
+        <p class="lead mt-5 w-50 m-auto">
+          We focus on ergonomics and meeting you where you work. It's only a
+          keystroke away.
+        </p>
+      </div>
+      <div class="row justify-content-center text-center pb-3">
+        <div class="col-lg-2 col-md-4 m-2 p-0">
+          <img
+            src="./img/gallery/top/rect-1.svg"
+            class="img-fluid"
+            style="border-radius: 0.5em"
+            alt=""
+          />
+        </div>
+        <div class="col-lg-2 col-md-4 m-2 p-0">
+          <img
+            src="./img/gallery/top/rect-2.svg"
+            class="img-fluid"
+            style="border-radius: 0.5em"
+            alt=""
+          />
+        </div>
+        <div class="col-lg-2 col-md-4 m-2 p-0">
+          <img
+            src="./img/gallery/top/rect-3.svg"
+            class="img-fluid"
+            style="border-radius: 0.5em"
+            alt=""
+          />
+        </div>
+        <div class="col-lg-2 col-md-4 m-2 p-0">
+          <img
+            src="./img/gallery/top/rect-4.svg"
+            class="img-fluid"
+            style="border-radius: 0.5em"
+            alt=""
+          />
+        </div>
+      </div>
+      <div
+        class="row justify-content-center text-center pt-3 align-items-center"
+      >
+        <div class="col-lg-3 my-2 p-0">
+          <img
+            src="./img/gallery/bottom/rect-1.svg"
+            class="img-fluid"
+            style="border-radius: 0.5em"
+            alt=""
+          />
+        </div>
+        <div class="col-lg-3 my-2 p-0">
+          <img
+            src="./img/gallery/bottom/rect-2.svg"
+            class="img-fluid"
+            style="border-radius: 0.5em; width: 57%"
+            alt=""
+          />
+        </div>
+        <div class="col-lg-3 my-2 p-0">
+          <img
+            src="./img/gallery/bottom/rect-3.svg"
+            class="img-fluid"
+            style="border-radius: 0.5em"
+            alt=""
+          />
+        </div>
+      </div>
+      <button class="btn btn-lg px-5 py-3 my-5 btn-outline-light">
+        See More
+      </button>
+    </div>
+    <!-- PARTNERS -->
+    <div class="container-md mb-5 pb-3 text-center">
+      <div class="row text-center flex-column text-light mb-5">
+        <p class="display-3 mt-5 w-50 m-auto">Partners</p>
+        <p class="lead mt-5 w-50 m-auto">
+          We focus on ergonomics and meeting you where you work. It's only a
+          keystroke away.
+        </p>
+      </div>
+      <ul class="nav justify-content-center">
+        <li class="nav-item partner">
+          <a class="nav-link" aria-current="page" href="#"
+            ><img src="./img/partners/logos_apple-app-store.svg" alt=""
+          /></a>
+        </li>
+        <li class="nav-item partner">
+          <a class="nav-link" href="#"
+            ><img src="./img/partners/logos_apiary.svg" alt=""
+          /></a>
+        </li>
+        <li class="nav-item partner">
+          <a class="nav-link" href="#"
+            ><img src="./img/partners/logos_android-icon.svg" alt=""
+          /></a>
+        </li>
+        <li class="nav-item partner">
+          <a class="nav-link" href="#"
+            ><img src="./img/partners/logos_basecamp.svg" alt=""
+          /></a>
+        </li>
+        <li class="nav-item partner">
+          <a class="nav-link" href="#"
+            ><img src="./img/partners/logos_airbnb.svg" alt=""
+          /></a>
+        </li>
+        <li class="nav-item partner">
+          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"
+            ><img src="./img/partners/logos_ibm.svg" alt=""
+          /></a>
+        </li>
+      </ul>
+      <button class="btn btn-lg px-5 py-3 my-5 btn-outline-light">
+        All Partners
+      </button>
+    </div>
+    <!-- TESTIMONIALS -->
+    <div class="container-md mb-5 pb-3 text-center">
+      <div class="row text-center flex-column text-light mb-5">
+        <p class="display-3 mt-5 w-50 m-auto">Testimonials</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-xl-5 col-xxl-4">
+          <div class="row my-4 justify-content-center">
+            <div
+              class="card text-light pb-3"
+              style="
+                width: 24rem;
+                background-color: #181818;
+                border-color: #fff;
+                border-radius: 0.5em;
+              "
+            >
+              <div class="card-body p-5">
+                <h5 class="card-title d-flex text-start align-items-center">
+                  <img
+                    src="./img/testimonials/claire.svg"
+                    class="card-img-top pe-4"
+                    alt=""
+                    style="width: 5em"
+                  />
+                  Claire Bell <br />Designer
+                </h5>
+                <p class="card-text mt-5 text-start">
+                  Slate helps you see how many more days you need to work to
+                  reach your financial goal for the month and year. Slate helps
+                  you see how many more days you need to work to reach your
+                  financial goal for the month and year.your financial goal for
+                  the month and year.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row my-4 justify-content-center">
+            <div
+              class="card text-light"
+              style="
+                width: 24rem;
+                background-color: #181818;
+                border-color: #fff;
+                border-radius: 0.5em;
+              "
+            >
+              <div class="card-body p-5">
+                <h5 class="card-title d-flex text-start align-items-center">
+                  <img
+                    src="./img/testimonials/ralph.svg"
+                    class="card-img-top pe-4"
+                    alt=""
+                    style="width: 5em"
+                  />
+                  Ralph Fisher <br />Designer
+                </h5>
+                <p class="card-text mt-5 text-start">
+                  Slate helps you see how many more days you need to work to
+                  reach your financial goal for the month and year. Slate helps
+                  you see how many more days you need to work to reach your
+                  financial goal for the month and year.your financial goal for
+                  the month and year.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-5 col-xxl-4">
+          <div class="row my-4 justify-content-center">
+            <div
+              class="card text-light"
+              style="
+                width: 24rem;
+                background-color: #181818;
+                border-color: #fff;
+                border-radius: 0.5em;
+              "
+            >
+              <div class="card-body p-5">
+                <h5 class="card-title d-flex text-start align-items-center">
+                  <img
+                    src="./img/testimonials/francisco.svg"
+                    class="card-img-top pe-4"
+                    alt=""
+                    style="width: 5em"
+                  />
+                  Francisco Lane <br />Designer
+                </h5>
+                <p class="card-text mt-5 text-start">
+                  Slate helps you see how many more days you need to work to
+                  reach your financial goal for the month and year. Slate helps
+                  you see how many more days you need to work to reach your
+                  financial goal for the month and year.your financial goal for
+                  the month and year.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row my-4 justify-content-center">
+            <div
+              class="card text-light"
+              style="
+                width: 24rem;
+                background-color: #181818;
+                border-color: #fff;
+                border-radius: 0.5em;
+              "
+            >
+              <div class="card-body p-5">
+                <h5 class="card-title d-flex text-start align-items-center">
+                  <img
+                    src="./img/testimonials/jorge.svg"
+                    class="card-img-top pe-4"
+                    alt=""
+                    style="width: 5em"
+                  />
+                  Jorge Murphy <br />Designer
+                </h5>
+                <p class="card-text mt-5 text-start">
+                  Slate helps you see how many more days you need to work to
+                  reach your financial goal for the month and year. Slate helps
+                  you see how many more days you need to work to reach your
+                  financial goal for the month and year.your financial goal for
+                  the month and year.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BANNER -->
+    <div class="container-xl mb-5 pb-3">
+      <div
+        class="card mb-3 text-light m-auto"
+        style="width: 80%; background-color: #343434; border-radius: 0.5em"
+      >
+        <div class="row g-0">
+          <div class="col-md-6 py-3 px-2">
+            <div
+              class="
+                card-body
+                h-100
+                d-flex
+                flex-column
+                justify-content-center
+                align-items-start
+              "
+            >
+              <h5 class="card-title fs-1">
+                OpenType features and Variable fonts
+              </h5>
+              <p class="card-text">
+                <a href="#" class="btn btn-lg px-5 py-3 my-4 purple-btn"
+                  >Try For Free</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-end">
+            <img
+              src="./img/banner/banner.svg"
+              class="img-fluid"
+              alt=""
+              style="border-bottom-right-radius: 0.5em"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-lg-8 text-light d-flex justify-content-around">
+          <div class="footer-link">
+            <p class="lead text-white pb-4 mt-5 fs-2">Fingertipe</p>
+            <ul style="padding-left: 0">
+              <li class="text-white" style="list-style: none">
+                <p class="lead fs-4">Home</p>
+              </li>
+              <li class="text-white" style="list-style: none">
+                <p class="lead fs-4">Examples</p>
+              </li>
+              <li class="text-white" style="list-style: none">
+                <p class="lead fs-4">Pricing</p>
+              </li>
+              <li class="text-white" style="list-style: none">
+                <p class="lead fs-4">Updates</p>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-link">
+            <p class="lead text-white pb-4 mt-5 fs-2">Resources</p>
+            <ul style="padding-left: 0">
+              <li class="text-white" style="list-style: none">
+                <p class="lead fs-4">Home</p>
+              </li>
+              <li class="text-white" style="list-style: none">
+                <p class="lead fs-4">Examples</p>
+              </li>
+              <li class="text-white" style="list-style: none">
+                <p class="lead fs-4">Pricing</p>
+              </li>
+              <li class="text-white" style="list-style: none">
+                <p class="lead fs-4">Updates</p>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-link">
+            <p class="lead text-white pb-4 mt-5 fs-2">About</p>
+            <ul style="padding-left: 0">
+              <li class="text-white" style="list-style: none">
+                <p class="lead fs-4">Home</p>
+              </li>
+              <li class="text-white" style="list-style: none">
+                <p class="lead fs-4">Examples</p>
+              </li>
+              <li class="text-white" style="list-style: none">
+                <p class="lead fs-4">Pricing</p>
+              </li>
+              <li class="text-white" style="list-style: none">
+                <p class="lead fs-4">Updates</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="col-lg-4 text-light d-flex flex-column justify-content-center"
+        >
+          <div class="address d-flex align-items-center my-3 footer-info">
+            <img src="./img/footer/bx_bx-map.svg" style="width: 46px" alt="" />
+            <p class="lead m-0 fs-4">7480 Mockingbird Hill undefined</p>
+          </div>
+          <div class="phone d-flex align-items-center my-3 footer-info">
+            <img
+              src="./img/footer/ic_baseline-phone-android.svg"
+              style="width: 46px"
+              alt=""
+            />
+            <p class="lead m-0 fs-4">(239) 555-0108</p>
+          </div>
+          <div class="social d-flex my-3 footer-info">
+            <a href=""
+              ><img
+                class="m-auto mx-3"
+                style="width: 52px; margin: 0 auto"
+                src="./img/footer/ant-design_twitter-outlined.svg"
+                alt=""
+            /></a>
+            <a href=""
+              ><img
+                class="m-auto mx-3"
+                style="width: 52px; margin: 0 auto"
+                src="./img/footer/ant-design_facebook-filled.svg"
+                alt=""
+            /></a>
+            <a href=""
+              ><img
+                class="m-auto mx-3"
+                style="width: 52px; margin: 0 auto"
+                src="./img/footer/ant-design_linkedin-filled.svg"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

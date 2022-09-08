@@ -1,0 +1,97 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-intermediate-lambda-reader.ss" "lang")((modname worksheet_11) (read-case-sensitive #t) (teachpacks ((lib "universe.rkt" "teachpack" "2htdp") (lib "image.rkt" "teachpack" "2htdp") (lib "batch-io.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "universe.rkt" "teachpack" "2htdp") (lib "image.rkt" "teachpack" "2htdp") (lib "batch-io.rkt" "teachpack" "2htdp")) #f)))
+(define-struct CD (artist genre price))
+
+;constructor:
+(define cd1 (make-CD "Johnny Cash" "Country" 1))
+(define cd2 (make-CD "BB King" "Blues" 2))
+(define cd3 (make-CD "Trivium" "Metal" 3))
+(define cd4 (make-CD "Alter Bridge" "Metal" 4))
+(define cd5 (make-CD "Tool" "Metal" 5))
+
+;selector:
+(CD-artist cd1)
+(CD-genre cd2)
+
+;predictor:
+(CD? cd1)
+(CD? 5)
+
+;list of CD
+(define CDList (list cd1 cd2 cd3 cd4 cd5))
+
+;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+;purpose: to produce a music album collection with given genre
+;contract: list g --> list
+(check-expect (mac CDList "Metal") (list "Trivium" "Alter Bridge" "Tool"))
+
+;function:
+(define (mac alist g)
+  (cond
+    [(empty? alist) '()]
+    [(string=? g (CD-genre (first alist)))(cons (CD-artist (first alist)) (mac (rest alist) g))]
+    [else (mac (rest alist) g)]))
+
+;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+;purpose: to produce total price of given album
+;contract: list g --> integer
+(check-expect (totalPrice CDList "Metal") 12)
+(check-expect (totalPrice CDList "Blues") 2)
+;function:
+(define (totalPrice alist genre)
+  (local
+    ((define (tp-acc lst g acc)
+       (cond
+         [(empty? lst) acc]
+         [(string=? g (CD-genre (first lst)))(+ (CD-price (first lst)) (tp-acc (rest lst) g acc))]
+         [else (tp-acc (rest lst) g acc)])))
+    (tp-acc alist genre 0)))
+
+;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+;purpose: to produce a list containing all the artists of CDs
+;contract: list --> list
+(check-expect (allArtists CDList) (list "Johnny Cash" "BB King" "Trivium" "Alter Bridge" "Tool"))
+;function:
+(define (allArtists alist)
+  (cond
+    ((empty? alist) '())
+    (else (cons (CD-artist (first alist)) (allArtists (rest alist))))))
+
+
+;******************************************************************************************************************************
+;==============================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

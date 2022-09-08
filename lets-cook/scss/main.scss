@@ -1,0 +1,54 @@
+@import "variables";
+@import "mixins";
+
+nav{
+    font-family: $main-font;
+}
+
+.carousel-item{
+    img{
+        height: 50vh;
+        object-fit: cover;
+    }
+}
+
+.categories-list{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.category-item{
+    font-size: 1.3em;
+    a{
+        color: #fff;
+        text-decoration: none;
+        &:hover{
+            font-size: 1.3em;
+            color: #FAC937;
+        }
+    }
+}
+
+.recipesAndCategories{
+    @include mQ(991px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .categories{
+            margin-top: 1em;
+            p::after{
+                margin: .2em 1.5em;
+                display: flex;
+                clear: both;
+                content: "";
+                position: absolute;
+                width: 10%;
+                height: 1px;
+                color: black;
+                background-color: black;
+            }
+        }
+    }
+}
